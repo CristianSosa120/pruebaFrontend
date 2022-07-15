@@ -1,0 +1,51 @@
+<form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <div class="separator-wrapper">
+        <label for="">Ingrese el separador</label>
+        <input class="input-text" formControlName="separator" (input)="changeSeparator($event)" type="text" placeholder="Ej: ,">
+        <div *ngIf="submitted && controls.separator.errors">
+        <div *ngIf="controls.separator.errors.required" class="error">Este campo es requerido</div>
+        </div>
+    </div>
+
+    <div class="file-wrapper" *ngIf="isSeparator">
+        <div class="file__section">
+            <img src="assets/images/upload.png" alt="">
+            <label for="" *ngIf="!isFile">Arrastre o suba un archivo</label>
+            <label for="" *ngIf="isFile">{{fileName}}</label>
+            <input formControlName="uploadFile" (change)="changeFile($event)" type="file">
+        </div>
+        <div *ngIf="submitted && controls.uploadFile.errors">
+            <div *ngIf="controls.uploadFile.errors.required" class="error">Este campo es requerido</div>
+        </div>
+    </div>
+    
+    <div class="info-wrapper" *ngIf="isHeaders && isSeparator">
+        <p>Asocie las columnas correspondientes:</p>
+        <div class="info__select" *ngFor="let option of readFields">
+            <label for="">{{option.value}}</label>
+            <ng-select  [items]="options"
+                        bindLabel="label"
+                        bindValue="position"
+                        [multiple]="false"
+                        [clearable]="false"
+                        placeholder="Seleccione una opción"
+                        formControlName="selectFields"
+                        (change)="changeSelect($event, option.field)">
+            </ng-select>
+        </div>
+    </div>
+
+    <div class="error" *ngIf="error">
+        <p>El separador ingresado es incorrecto, por favor ingrese el separador correcto</p>
+    </div>
+
+    <button class="btn-yellow">Cargar Archivo</button>
+
+    <div class="loading" *ngIf="loading">
+        <img src="assets/images/loading.gif" alt="">
+    </div>
+
+    <div class="loading" *ngIf="success">
+        <p>Archivo cargado con éxito</p>
+    </div>
+</form>

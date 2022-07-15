@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@font-face {
+    font-family: 'helvetica-bold';
+    src: url('assets/fonts/HelveticaWorld-Bold.eot');
+    src: url('assets/fonts/HelveticaWorld-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/HelveticaWorld-Bold.woff2') format('woff2'),
+        url('assets/fonts/HelveticaWorld-Bold.woff') format('woff'),
+        url('assets/fonts/HelveticaWorld-Bold.ttf') format('truetype'),
+        url('assets/fonts/HelveticaWorld-Bold.svg#HelveticaWorld-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica-bold-italic';
+    src: url('assets/fonts/HelveticaWorld-BoldItalic.eot');
+    src: url('assets/fonts/HelveticaWorld-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/HelveticaWorld-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/HelveticaWorld-BoldItalic.woff') format('woff'),
+        url('assets/fonts/HelveticaWorld-BoldItalic.ttf') format('truetype'),
+        url('assets/fonts/HelveticaWorld-BoldItalic.svg#HelveticaWorld-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'helvetica-regular';
+    src: url('assets/fonts/HelveticaWorld-Regular.eot');
+    src: url('assets/fonts/HelveticaWorld-Regular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/HelveticaWorld-Regular.woff2') format('woff2'),
+        url('assets/fonts/HelveticaWorld-Regular.woff') format('woff'),
+        url('assets/fonts/HelveticaWorld-Regular.ttf') format('truetype'),
+        url('assets/fonts/HelveticaWorld-Regular.svg#HelveticaWorld-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvetica-ltsd-bold';
+    src: url('assets/fonts/HelveticaLTStd-Bold.eot');
+    src: url('assets/fonts/HelveticaLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/HelveticaLTStd-Bold.woff2') format('woff2'),
+        url('assets/fonts/HelveticaLTStd-Bold.woff') format('woff'),
+        url('assets/fonts/HelveticaLTStd-Bold.ttf') format('truetype'),
+        url('assets/fonts/HelveticaLTStd-Bold.svg#HelveticaLTStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helvetica-ltstd';
+    src: url('assets/fonts/HelveticaLTStd-LightObl.eot');
+    src: url('assets/fonts/HelveticaLTStd-LightObl.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/HelveticaLTStd-LightObl.woff2') format('woff2'),
+        url('assets/fonts/HelveticaLTStd-LightObl.woff') format('woff'),
+        url('assets/fonts/HelveticaLTStd-LightObl.ttf') format('truetype'),
+        url('assets/fonts/HelveticaLTStd-LightObl.svg#HelveticaLTStd-LightObl') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+p, 
+h1,
+h2,
+h3{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+h1{
+    padding: 4vh 0;
+    color: #5b5b5f;
+    font-size: 2.500em;
+    text-align: center;
+    font-family: 'helvetica-bold', sans-serif;
+}
+label{
+    color: #5b5b5f;
+    font-family: 'helvetica-regular', sans-serif;
+}
+.btn-yellow{
+    width: 100%;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    line-height: 40px;
+    color: #5b5b5f;
+    background-color: #e6b54a;
+    font-size: .938em;
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border-radius: 4px;
+    transition: all 0.4s;
+    &:hover{
+        background-color: #5b5b5f; 
+        border-radius: 4px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+.error{
+    margin-top: 2vh;
+    width: 100%;
+    color: #f52b53;
+    font-size: 0.8em;
+    font-family: "helvetica-ltstd", sans-serif;
+}
+.input-text{
+    color: #87868a;
+    width: 100%;
+    border: 1px solid #9a999e;
+    padding: 7px;
+    font-size: .938em;
+    font-weight: 400;
+    outline: 0;
+    border-radius: 4px;
+    font-family: 'helvetica-regular', sans-serif;
+    &:focus{
+        border: 1px solid #e6b54a;
+    }
+}
+.loader{
+    text-align: center;
+    margin-top: 4vh;
+}
